@@ -58,7 +58,7 @@ for number in jobs:
 
     niceplots.setRCParams()
 
-    plt.plot(iterations, funcValues)
+    plt.plot(iterations, funcValues,color='C1')
     plt.xlabel('Iterations')
     plt.ylabel(objFunc)
     plt.savefig(case + '_' + objFunc + '_' + regime + '.png')
