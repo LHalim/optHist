@@ -11,7 +11,6 @@ for item in direct:
         os.remove(os.path.join(dir_name, item))
 
 jobs = [19,20,22,23,27,28,29,33,34,35]
-jobs = [19,20,22,23,27,28,29]
 
 for number in jobs:
     lines = []
