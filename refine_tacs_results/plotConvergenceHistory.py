@@ -20,12 +20,13 @@ for number in jobs:
     vec_KS = [2]
 
     if number in vec_KS:
-        objFunc = 'KSFailure'
+        objFunc = 'Failure Index'
+        insert = 'KSFailure'
         cutoff = 0
     else:
-        objFunc = 'Temperature'
+        objFunc = 'Scaled Temperature'
+        insert = 'Temperature'
         cutoff = 0.001
-
 
     iteration = 0
     iterations = [1]
@@ -61,7 +62,7 @@ for number in jobs:
     plt.plot(iterations, funcValues,color='C1')
     plt.xlabel('Iterations')
     plt.ylabel(objFunc)
-    plt.savefig('TACS_' + objFunc + '_CH.png')
+    plt.savefig('TACS_' + insert + '_CH.png')
     plt.clf()
     #plt.show()
 

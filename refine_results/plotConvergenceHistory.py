@@ -30,10 +30,12 @@ for number in jobs:
         case = 'Aeroelastic'
 
     if number in vec_KS:
-        objFunc = 'KSFailure'
+        objFunc = 'Failure Index'
+        insert = 'KSFailure'
         cutoff = 0
     else:
-        objFunc = 'Temperature'
+        objFunc = 'Scaled Temperature'
+        insert = 'Temperature'
         cutoff = 0.001
 
     if number in vec_SUB:
@@ -78,7 +80,7 @@ for number in jobs:
     plt.plot(iterations, funcValues,color='C1')
     plt.xlabel('Iterations')
     plt.ylabel(objFunc)
-    plt.savefig(case + '_' + objFunc + '_' + regime + '.png')
+    plt.savefig(case + '_' + insert + '_' + regime + '.png')
     plt.clf()
     #plt.show()
 
